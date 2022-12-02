@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="" id="sad">
+	<button onclick="bookcode();">перевести</button>
+    <script>
+        function bookcode()
+        {
+            console.log("fdfgwf");
+            var codedres = "";
+            var str = document.getElementById("sad").value;
+            var key = ["Любя, съешь щипцы, —",
+            "вздохнёт мэр, — кайф жгуч.",
+            "Шеф взъярён тчк щипцы", 
+            "с эхом гудбай Жюль.",
+            "Эй, жлоб!"];
+            var fr;
+            var check = 0;
+            for(var i = 0; i < str.length; i++)
+            {
+                for (var u = 0; u < key.length; u++) 
+                {
+                    fr = key[u];
+                    console.log(fr);
+                    for (var u1 = 0; u1 < fr.length; u1++)
+                    {
+                        if(check == 1)
+                        {
+                            break;
+                        }
+                        console.log(fr.length);
+                        if(str[i] == fr[u1])
+                        {
+                            codedres += "(" + u + ", " + u1 + ")";
+                            console.log("dsfds");
+                            check = 1;
+                            break;
+                        }
+                    }
+                    if(check == 1)
+                        break;
+                }
+                check = 0;
+            }
+            console.log(str[1]);
+            alert(codedres);
+        }   
+    </script>
+</body>
+</html>
